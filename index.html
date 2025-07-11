@@ -16,7 +16,7 @@
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Favicon (CORRIGIDO) -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,10 +31,14 @@
         }
         /* Estilos para o Swiper (Carrossel) */
         .swiper-button-next, .swiper-button-prev {
-            color: #ff9d01 !important; /* Cor laranja para as setas */
+            color: #ff9d01 !important;
         }
         .swiper-pagination-bullet-active {
-            background: #ff9d01 !important; /* Cor laranja para a paginação ativa */
+            background: #ff9d01 !important;
+        }
+        /* Estilo para o cursor nas imagens do carrossel */
+        .lightbox-trigger {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -62,16 +66,16 @@
             <!-- Swiper -->
             <div class="swiper testimonials-swiper">
                 <div class="swiper-wrapper">
-                    <!-- Slides com imagens maiores -->
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d1.png" alt="Depoimento de aluno 1" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d2.png" alt="Depoimento de aluno 2" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d3.png" alt="Depoimento de aluno 3" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d4.png" alt="Depoimento de aluno 4" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d5.png" alt="Depoimento de aluno 5" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d6.png" alt="Depoimento de aluno 6" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d7.png" alt="Depoimento de aluno 7" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d8.png" alt="Depoimento de aluno 8" class="rounded-lg shadow-md max-h-[700px]"></div>
-                    <div class="swiper-slide flex justify-center items-center bg-slate-100 rounded-lg"><img src="depoimentos/d9.png" alt="Depoimento de aluno 9" class="rounded-lg shadow-md max-h-[700px]"></div>
+                    <!-- Slides com imagens clicáveis -->
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d1.png" alt="Depoimento de aluno 1" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d2.png" alt="Depoimento de aluno 2" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d3.png" alt="Depoimento de aluno 3" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d4.png" alt="Depoimento de aluno 4" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d5.png" alt="Depoimento de aluno 5" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d6.png" alt="Depoimento de aluno 6" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d7.png" alt="Depoimento de aluno 7" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d8.png" alt="Depoimento de aluno 8" class="rounded-lg shadow-md lightbox-trigger"></div>
+                    <div class="swiper-slide flex justify-center bg-slate-100 rounded-lg"><img src="depoimentos/d9.png" alt="Depoimento de aluno 9" class="rounded-lg shadow-md lightbox-trigger"></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -100,11 +104,12 @@
         </div>
     </main>
 
-    <!-- NOVA SEÇÃO: Playlist do YouTube -->
+    <!-- Playlist do YouTube -->
     <section class="py-20 px-4 bg-white">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Veja meus alunos em ação</h2>
-            <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden">
+            <!-- Container com altura aumentada -->
+            <div class="w-full h-[300px] md:h-[500px] rounded-lg shadow-lg overflow-hidden">
                 <iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?si=JX2lub7nc618QfdS&amp;list=PLAERYVk0kTlIs1q1wiUNiiRLM9Sp9HENa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
@@ -139,6 +144,12 @@
         <p class="text-gray-500 text-sm mt-1">Desenvolvido para um artista, por uma IA.</p>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center hidden z-50 p-4">
+        <span id="close-lightbox" class="absolute top-5 right-8 text-white text-5xl font-bold cursor-pointer">&times;</span>
+        <img id="lightbox-image" src="" alt="Depoimento em tela cheia" class="max-w-[90%] max-h-[90%] object-contain">
+    </div>
+
     <!-- Swiper.js JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -161,16 +172,35 @@
                 prevEl: ".swiper-button-prev",
             },
             breakpoints: {
-                // quando a tela for >= 768px
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                },
-                // quando a tela for >= 1024px
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 40
-                }
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 40 }
+            }
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeLightbox = document.getElementById('close-lightbox');
+        const triggers = document.querySelectorAll('.lightbox-trigger');
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', e => {
+                const imgSrc = e.currentTarget.getAttribute('src');
+                lightboxImage.setAttribute('src', imgSrc);
+                lightbox.classList.remove('hidden');
+            });
+        });
+
+        const hideLightbox = () => {
+            lightbox.classList.add('hidden');
+            lightboxImage.setAttribute('src', ''); // Limpa o src para parar o carregamento
+        }
+
+        closeLightbox.addEventListener('click', hideLightbox);
+        lightbox.addEventListener('click', e => {
+            // Esconde o lightbox se clicar no fundo, não na imagem
+            if (e.target === lightbox) {
+                hideLightbox();
             }
         });
     </script>
